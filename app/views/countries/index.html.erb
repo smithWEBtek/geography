@@ -1,0 +1,13 @@
+<h1>All Countries</h1>
+
+<% @countries.each do |country| %>
+	<h3><%= country.name %></h3>
+
+	<% country.states.each do |state| %>
+		<h5><%= state.name %></h5>
+		
+		<% state.cities.each do |city| %>
+			<p><%= city.name %></p>
+		<% end %>
+	<% end %>
+<% end %>
