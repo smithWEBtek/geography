@@ -1,0 +1,10 @@
+<h1><%= @country.name %></h1>
+	<h3>States:</h3>
+	<% @country.states.each do |state| %>
+		<fieldset>
+			<h4><%= state.abbr %>: <%= state.name %></h4>
+			<% state.cities.each do |city| %>
+				<p><%= city.name %></p>
+			<% end %>
+		</fieldset>
+	<% end %>
